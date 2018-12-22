@@ -7,6 +7,6 @@ tags:
   - caffe
   - cibo
 ---
-![](/img/chemex.jpg)
+![caffe](/img/chemex.jpg)
 
 Lorem Ipsum
