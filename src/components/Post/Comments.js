@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import FacebookProvider, { Comments as FBComments } from "react-facebook";
 
-import config from "../../../content/meta/config";
+import config from "../../content/meta/config";
 
 const Comments = props => {
   const { facebook, slug, theme } = props;

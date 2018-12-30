@@ -14,7 +14,7 @@ import {
   LinkedinIcon
 } from "react-share";
 
-import config from "../../../content/meta/config";
+import config from "../../content/meta/config";
 
 const PostShare = props => {
   const {
