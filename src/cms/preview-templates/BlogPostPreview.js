@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BlogPostTemplate } from '../../templates/PostTemplate'
+import BlogPostTemplate  from '../../templates/PostTemplate'
 
 
 const BlogPostPreview = ({ entry, widgetFor }) => (
