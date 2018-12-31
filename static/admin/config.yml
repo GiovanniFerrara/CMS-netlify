@@ -14,6 +14,7 @@ collections:
     fields:
       - {label: "title", name: "title", widget: "string"}
       - {label: "category", name: "category", widget: "string"}
-      - {label: "cover", name: "cover", widget: "string"}
+      - {label: "cover", name: "cover", widget: image}
       - {label: "author", name: "author", widget: "string"}
+      # - {label: "body", name: "author", widget: markdown}
       
