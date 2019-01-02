@@ -17,19 +17,16 @@ const Item = props => {
         title,
         category,
         author,
-        cover: {
-          children: [{ fluid }]
-        }
+        cover
       }
     }
   } = props;
-
   return (
     <React.Fragment>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <Img fluid={fluid} />
+            <img src={cover} />
           </div>
           <h1>
             {title} <FaArrowRight className="arrow" />

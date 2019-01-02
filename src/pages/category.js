@@ -86,7 +86,7 @@ export default CategoryPage;
 export const query = graphql`
   query PostsQuery {
     posts: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//blog/[0-9]+.*-/" } }
+      filter: { fileAbsolutePath: { regex: "//blog/[0-9]+.*--/" } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
       edges {
@@ -100,15 +100,7 @@ export const query = graphql`
             title
             category
             author
-            cover {
-              children {
-                ... on ImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
+            cover
           }
         }
       }
