@@ -86,7 +86,7 @@ export default CategoryPage;
 export const query = graphql`
   query PostsQuery {
     posts: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//blog/[0-9]+.*--/" } }
+      filter: { fileAbsolutePath: { regex: "//blog/[0-9]+.*_/" } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
       edges {

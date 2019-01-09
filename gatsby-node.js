@@ -118,8 +118,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({ node, getNode });
     const fileNode = getNode(node.parent);
     const source = fileNode.sourceInstanceName;
-    const separtorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
-    const shortSlugStart = separtorIndex ? separtorIndex + 2 : 0;
+    const separtorIndex = ~slug.indexOf("_") ? slug.indexOf("_") : 0;
+    const shortSlugStart = separtorIndex ? separtorIndex + 1 : 0;
 
     if (source !== "parts") {
       createNodeField({
