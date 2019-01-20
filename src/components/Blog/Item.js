@@ -26,7 +26,7 @@ const Item = props => {
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <img src={cover} />
+            <img className="gatsby-image-inner" src={cover} />
           </div>
           <h1>
             {title} <FaArrowRight className="arrow" />
@@ -98,6 +98,9 @@ const Item = props => {
               width: 50%;
             }
           }
+        }
+        :global(.gatsby-image-inner) {
+          width: 100%;
         }
 
         h1 {

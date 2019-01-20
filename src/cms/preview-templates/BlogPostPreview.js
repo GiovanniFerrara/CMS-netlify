@@ -1,27 +1,26 @@
-// import React from 'react'
-// import PropTypes from 'prop-types'
-// import BlogPostTemplate  from '../../templates/PostTemplate'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Post from '../../components/Post/Post'
+import theme from '../../../src/theme/theme.yaml'
 
+const BlogPostPreview = ({ entry, widgetFor }) => (
+  <Post
+    post={
+      {
+        post: {
+        html: "<p> Test </p>",
+        fields: { 
+          prefix:"prefix",
+           slug: "slug"
+          },
+        frontmatter: { title: "title", author: "author", category : "category" }
+      },
+      authornote: "author note",
+      facebook: {},
+      theme: theme
+    }
+  }
+  />
+)
 
-// const BlogPostPreview = ({ entry, widgetFor }) => (
-//   <BlogPostTemplate
-//     data= {{
-//       post: {
-//         html: entry.getIn(['data','body'])
-//       }
-//     }}
-//     // content={widgetFor('body')}
-//     // description={entry.getIn(['data', 'description'])}
-//     // tags={entry.getIn(['data', 'tags'])}
-//     // title={entry.getIn(['data', 'title'])}
-//   />
-// )
-
-// BlogPostPreview.propTypes = {
-//   entry: PropTypes.shape({
-//     getIn: PropTypes.func,
-//   }),
-//   widgetFor: PropTypes.func,
-// }
-
-// export default BlogPostPreview
+export default BlogPostPreview
