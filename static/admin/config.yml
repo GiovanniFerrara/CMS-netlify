@@ -45,14 +45,16 @@ collections:
             widget: list
             create: "false"
             fields:
-              - label: Font Family
+              - label: Family Font
                 name: family
                 widget: "string"
+                required: "false"
+                default: "Open Sans"
               - label: Color
                 name: color
                 widget: object
                 fields: 
-                  - {label: "Primary", name: "primary", required: "false", default: "#ffffff", widget: "color"}
+                  - {label: "Primary", name: "primary", required: "false", default: "#709425", widget: "color"}
                   - {label: "Primary Inverse", name: "primaryInverse", required: "false", default: "#3e3e3c", widget: "color"}
                   - {label: "Brand", name: "brand", required: "false", default: "#fafaf9", widget: "color"}
                   

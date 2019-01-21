@@ -102,7 +102,7 @@ background:
     alt: *color-gray-1
     brand: *color-brand-primary
 text:
-  family: "Open Sans"
+  # family: "Open Sans"
   color:
     primary: *color-gray-10
     primaryInverse: *color-white
