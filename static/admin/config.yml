@@ -46,7 +46,7 @@ collections:
             create: "false"
             fields:
               - label: Family Font
-                name: family
+                test: family
                 widget: "string"
                 required: "false"
                 default: "Open Sans"
@@ -58,3 +58,25 @@ collections:
                   - {label: "Primary Inverse", name: "primaryInverse", required: "false", default: "#3e3e3c", widget: "color"}
                   - {label: "Brand", name: "brand", required: "false", default: "#fafaf9", widget: "color"}
                   
+  - name: "homepage"
+    label: Homepage settings
+    files:
+      - file: src/content/homepage/homepage.md
+        name: homepage
+        label: Homepage settings
+        delete: false
+        editor: 
+          preview: false 
+        fields:
+          - name: coverDesktop
+            label: Cover Picture - Desktop size
+            delete: false
+            widget: image
+          - name: coverTablet
+            label: Cover Picture - Tablet size
+            delete: false
+            widget: image
+          - name: coverMobile
+            label: Cover Picture - Mobile size
+            delete: false
+            widget: image
