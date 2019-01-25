@@ -30,3 +30,25 @@ collections:
       - {label: "title", name: "title", widget: "string"}
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
       - {label: "body", name: "body", widget: markdown}
+  - name: "homepage"
+    label: Homepage settings
+    files:
+      - file: src/content/homepage/homepage.md
+        name: homepage
+        label: Homepage settings
+        delete: false
+        editor: 
+          preview: false 
+        fields:
+          - name: coverDesktop
+            label: Cover Picture - Desktop size
+            delete: false
+            widget: image
+          - name: coverTablet
+            label: Cover Picture - Tablet size
+            delete: false
+            widget: image
+          - name: coverMobile
+            label: Cover Picture - Mobile size
+            delete: false
+            widget: image
