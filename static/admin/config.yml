@@ -19,3 +19,14 @@ collections:
       - {label: "cover", name: "cover", widget: image}
       - {label: "author", name: "author", widget: "string"}
       - {label: "body", name: "body", widget: markdown}
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: true
+    editor: 
+      preview: false 
+    slug: "{{slug}}"
+    fields:
+      - {label: "title", name: "title", widget: "string"}
+      - {label: "Menu Title", name: "menuTitle", widget: "string"}
+      - {label: "body", name: "body", widget: markdown}
