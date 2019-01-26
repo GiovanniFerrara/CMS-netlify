@@ -20,15 +20,21 @@ const query = `{
     }
   }
 }`;
-
-const queries = [
-  {
-    query,
-    transformer: ({ data }) => {
-      return data.allMarkdownRemark.edges.reduce(transformer, []);
+try{
+  const queries = [
+    {
+      query,
+      transformer: ({ data }) => {
+        console.log(data.allMarkdownRemark.edges, "QUERIES")
+  
+        return data.allMarkdownRemark.edges.reduce(transformer, []);
+      }
     }
-  }
-];
+  ];
+} catch(err){
+  console.log(err)
+}
+
 
 module.exports = {
   // pathPrefix: config.pathPrefix,
