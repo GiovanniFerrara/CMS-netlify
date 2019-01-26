@@ -17,25 +17,19 @@ class IndexPage extends React.Component {
     const {
       data: {
         posts: { edges: posts = [] },
-        bgDesktop: {
-          resize: { src: desktop }
-        },
-        bgTablet: {
-          resize: { src: tablet }
-        },
-        bgMobile: {
-          resize: { src: mobile }
+        images: {
+          edges: fileHome,
         },
         site: {
           siteMetadata: { facebook }
         }
       }
     } = this.props;
-
+    console.log(this.props)
     const backgrounds = {
-      desktop,
-      tablet,
-      mobile
+      desktop: fileHome[0].node.frontmatter.coverDesktop ,
+      tablet: fileHome[0].node.frontmatter.coverTablet,
+      mobile: fileHome[0].node.frontmatter.coverMobile
     };
 
     return (
@@ -101,21 +95,19 @@ export const query = graphql`
         }
       }
     }
-    bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 1200, quality: 90, cropFocus: CENTER) {
-        src
+    images: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/homepage/" } }
+    ) {
+  	edges{
+      node{
+        frontmatter{
+          coverDesktop
+          coverTablet
+          coverMobile
+        }
       }
     }
-    bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
-        src
-      }
-    }
-    bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
-        src
-      }
-    }
+  }
   }
 `;
 
