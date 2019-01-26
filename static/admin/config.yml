@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: wasWorking
+  branch: wasworking
   repo: GiovanniFerrara/CMS-netlify
 media_folder: static/img
 public_folder: /img
