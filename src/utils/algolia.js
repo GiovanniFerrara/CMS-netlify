@@ -4,17 +4,22 @@ module.exports = function(chunksTotal, { node }) {
     frontmatter: { title },
     internal: { content }
   } = node;
-
   const noEmojiContent = content.replace(/<img class="emoji-icon".+\/>/g, "");
 
   const contentChunks = chunkString(noEmojiContent, 5000);
   const record = { title, slug, content };
-  const recordChunks = contentChunks.reduce((recordChunksTotal, contentChunksItem, idx) => {
-    return [
-      ...recordChunksTotal,
-      { ...record, ...{ content: contentChunksItem }, objectID: `${slug}${idx}` }
-    ];
-  }, []);
+  try {
+    const recordChunks = contentChunks.reduce((recordChunksTotal, contentChunksItem, idx) => {
+      return [
+        ...recordChunksTotal,
+        { ...record, ...{ content: contentChunksItem }, objectID: `${slug}${idx}` }
+      ];
+    }, []);
+  } catch(err){
+    const recordChunks = []
+    console.log(err)
+  }
+
 
   return [...chunksTotal, ...recordChunks];
 };

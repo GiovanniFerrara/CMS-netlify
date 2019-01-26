@@ -25,7 +25,6 @@ class IndexPage extends React.Component {
         }
       }
     } = this.props;
-    console.log(this.props)
     const backgrounds = {
       desktop: fileHome[0].node.frontmatter.coverDesktop ,
       tablet: fileHome[0].node.frontmatter.coverTablet,
