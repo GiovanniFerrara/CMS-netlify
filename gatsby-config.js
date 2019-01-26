@@ -32,6 +32,7 @@ try{
     }
   ];
 } catch(err){
+  const queries = []
   console.log(err)
 }
 
