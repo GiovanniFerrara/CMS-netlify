@@ -13,7 +13,11 @@ module.exports = {
 
   /* info */
   headerTitle: "Alessandro Ferrara",
+<<<<<<< HEAD
   headerSubTitle: "Critico Sportivo e amante della FIGC",
+=======
+  headerSubTitle: "Scrittore di storie di sport",
+>>>>>>> wasworking
 
   /* manifest.json */
   manifestName: "HeroBlog - a GatsbyJS starter",
