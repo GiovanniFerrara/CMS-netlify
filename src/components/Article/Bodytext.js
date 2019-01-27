@@ -47,6 +47,15 @@ const Bodytext = props => {
             color: ${theme.color.brand.primary};
             text-decoration: underline;
           }
+          :global(img) {
+            border: 0;
+            display: block;
+            margin: 2.5em 0;
+            border-radius: ${theme.size.radius.default};
+            overflow: hidden;
+            width: 100%;
+            border: 1px solid ${theme.line.color};
+          }
           :global(a.gatsby-resp-image-link) {
             border: 0;
             display: block;
@@ -56,7 +65,7 @@ const Bodytext = props => {
             border: 1px solid ${theme.line.color};
           }
           :global(code.language-text) {
-            background: ${theme.color.neutral.gray.c};
+            // background: ${theme.color.neutral.gray.c};
             text-shadow: none;
             color: inherit;
             padding: 0.1em 0.3em 0.2em;
